@@ -1,0 +1,96 @@
+/* * permet de choisir tout le contenu de la page */
+*{
+    background-color: khaki;
+}
+
+/* Le signe + permet de choisir l'élément qui vient juste après l'élément indiqué (Un seul élément) */
+ul + p {
+    color:rebeccapurple;
+    font-size:30px;
+    font-weight: bold;
+}
+
+/* Le signe > permet de selectionner l'élément(s) enfant(s)contenu dans un autre élément parent*/
+
+#para > h2{
+    color:blue;
+}
+
+/* ~ séléctionne les éléments directement placés après l'élément indiqué 
+
+#par2 ~ p {
+    color:deeppink;
+}*/
+
+/* abbr */
+h1[class="h2"]{
+    background-color: black;
+    color:brown;
+    text-align:center;
+}
+
+/* Checkbox */
+input[type]{
+    display: none;
+}
+input:checked + label{
+    font-size: 50px;
+    color:red;
+}
+
+/* Not */
+.one:not(.three){
+    background-color: whitesmoke;
+}
+
+/* nth-child pour choisir un élément enfant spécifique dans un groupe d'éléments, fonctionne avec odd(impair) et even(paire) */
+.item:nth-child(odd){
+    background-color: blueviolet;
+}
+
+h1:hover{
+    color:orange;
+}
+
+a:link{
+    color:blue;
+}
+
+a:visited{
+    color:red;
+}
+
+.mondiv > p:first-child{
+    color:orange;
+}
+
+p:last-child{
+    color:maroon;
+}
+
+div{
+    border:1px solid red;
+}
+
+
+p::first-letter{
+    font-size:30px;
+    color:yellowgreen;
+}
+
+p::first-line{
+    font-size:30px;
+    color:yellowgreen;
+}
+
+p::selection{
+    background-color:aqua;
+}
+
+div::before{
+    content: "Du texte ajouté avant";
+}
+
+div::after{
+    content:url("animal.jpg");
+}
